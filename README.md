@@ -87,6 +87,21 @@ vsce package
 3. 在 Azure DevOps 创建发布者的 Personal Access Token。
 4. 执行 `vsce login <publisher>`，随后 `vsce publish`（或 `vsce publish minor` 自动升版本号）。
 
+## 自动化发布（GitHub Actions）
+
+仓库内置 `.github/workflows/release.yml`，可自动打包并发布 VSIX：
+
+- **打标签自动发布**：推送形如 `v1.0.0` 的标签时，Actions 会自动执行 `vsce package` 打包，并创建对应的 GitHub Release，把 `.vsix` 作为附件上传（含自动生成的发布说明）。
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+- **手动触发**：在 Actions 页面手动运行（workflow_dispatch）时，会打包并把 `.vsix` 作为构建产物（Artifact）上传，便于下载测试。
+
+> 该流程只发布到本仓库的 Release，**不会**发布到 VS Code 市场（无需配置任何令牌）。
+
 ## 许可与署名
 
 本扩展中的主题文件版权归 Microsoft Corporation 所有，遵循 MIT 许可（源自 VS Code 的 `theme-defaults` 扩展）。本扩展同样以 MIT 许可分发，详见 `LICENSE`。
