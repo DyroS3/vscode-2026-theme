@@ -83,7 +83,7 @@ vsce package
 > 本扩展已具备发布条件，但**当前不发布到市场**。将来若要发布，请按以下步骤：
 
 1. 把 `package.json` 的 `publisher` 改为你在市场注册的发布者 ID（当前为占位值 `local-themes`）。
-2. 把 `repository` / `bugs` / `homepage` 改为你真实的仓库地址（当前为占位的 `local-themes` GitHub 地址）。
+2. 仓库地址已指向 `https://github.com/DyroS3/vscode-2026-theme`，如需更换可自行修改 `repository` / `bugs` / `homepage`。
 3. 在 Azure DevOps 创建发布者的 Personal Access Token。
 4. 执行 `vsce login <publisher>`，随后 `vsce publish`（或 `vsce publish minor` 自动升版本号）。
 
