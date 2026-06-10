@@ -1,0 +1,51 @@
+{
+  "name": "vscode-2026-theme",
+  "displayName": "2026 Theme (Dark & Light)",
+  "description": "The VS Code 2026 default Dark & Light color themes, packaged as a standalone, maintainable extension. Adds \"2026 Dark\" and \"2026 Light\" to the theme picker, useful for Cursor or older VS Code builds that do not ship them.",
+  "version": "1.0.0",
+  "publisher": "local-themes",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark",
+    "light",
+    "2026",
+    "modern"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#191A1B",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/local-themes/vscode-2026-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/local-themes/vscode-2026-theme/issues"
+  },
+  "homepage": "https://github.com/local-themes/vscode-2026-theme#readme",
+  "contributes": {
+    "themes": [
+      {
+        "id": "2026 Dark",
+        "label": "%dark2026ThemeLabel%",
+        "uiTheme": "vs-dark",
+        "path": "./themes/2026-dark.json"
+      },
+      {
+        "id": "2026 Light",
+        "label": "%light2026ThemeLabel%",
+        "uiTheme": "vs",
+        "path": "./themes/2026-light.json"
+      }
+    ]
+  }
+}
